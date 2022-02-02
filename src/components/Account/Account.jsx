@@ -56,8 +56,8 @@ function Account() {
           <p style={styles.text}>Authenticate</p>
         </div>
         <Modal
+          footer={false}
           visible={isAuthModalVisible}
-          footer={null}
           onCancel={() => setIsAuthModalVisible(false)}
           bodyStyle={{
             padding: "15px",
