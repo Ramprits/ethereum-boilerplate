@@ -63,7 +63,6 @@ const App = ({ isServerInfo }) => {
     const connectorId = window.localStorage.getItem("connectorId");
     if (isAuthenticated && !isWeb3Enabled && !isWeb3EnableLoading)
       enableWeb3({ provider: connectorId });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isAuthenticated, isWeb3Enabled]);
 
   return (

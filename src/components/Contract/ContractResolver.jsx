@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { InboxOutlined } from "@ant-design/icons";
 import { message } from "antd";
 import Dragger from "antd/lib/upload/Dragger";

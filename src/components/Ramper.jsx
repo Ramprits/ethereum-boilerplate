@@ -12,7 +12,6 @@ function Ramper() {
         .then((data) => setRamper(data.data));
     }
     initPlugin();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [Moralis.Plugins]);
 
   return (

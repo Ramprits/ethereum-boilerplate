@@ -8,7 +8,6 @@ import { ArrowDownOutlined } from "@ant-design/icons";
 import { useTokenPrice } from "react-moralis";
 import { tokenValue } from "helpers/formatters";
 import { getWrappedNative } from "helpers/networks";
-// import { useOneInchQuote } from "react-moralis";
 
 const styles = {
   card: {
@@ -98,7 +97,6 @@ function DEX({ chain, customTokens = {} }) {
       Moralis?.Units?.FromWei(quote?.toTokenAmount, quote?.toToken?.decimals) *
       toTokenPriceUsd
     ).toFixed(4)}`;
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [toTokenPriceUsd, quote]);
 
   // tokenPrices
@@ -116,7 +114,6 @@ function DEX({ chain, customTokens = {} }) {
           [fromToken["address"]]: price["usdPrice"],
         }),
     });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [chain, isInitialized, fromToken]);
 
   useEffect(() => {
@@ -133,7 +130,6 @@ function DEX({ chain, customTokens = {} }) {
           [toToken["address"]]: price["usdPrice"],
         }),
     });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [chain, isInitialized, toToken]);
 
   useEffect(() => {
@@ -157,7 +153,6 @@ function DEX({ chain, customTokens = {} }) {
 
   useEffect(() => {
     if (currentTrade) getQuote(currentTrade).then((quote) => setQuote(quote));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentTrade]);
 
   const PriceSwap = () => {

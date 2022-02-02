@@ -9,7 +9,6 @@ export const useERC20Transfers = () => {
   useEffect(() => {
     if (isInitialized)
       fetchERC20Transfers().then((result) => setERC20Transfers(result));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isInitialized, chainId, walletAddress]);
 
   const fetchERC20Transfers = async () => {

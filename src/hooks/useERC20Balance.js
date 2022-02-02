@@ -11,7 +11,6 @@ export const useERC20Balance = (params) => {
     if (isInitialized) {
       fetchERC20Balance().then((balance) => setAssets(balance));
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isInitialized, chainId, walletAddress]);
 
   const fetchERC20Balance = async () => {
